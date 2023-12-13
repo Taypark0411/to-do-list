@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+<div class="row"><h1>Create a new task</h1></div>
+
+<form action="/insert" method="POST">
+  <div class="row">
+    <label> task</label>
+    <input type="text" name="task" />
+  </div>
+  <div class = "row">
+    <label> Due_Date</label>
+    <input type="text" name="due_date" />
+  </div>
+  <div class="row">
+    <label> Note</label>
+    <input type="text" name="note" />
+  </div>
+  <div class="row">
+    <label> Status</label>
+    <input type="text" name="status" />
+  </div>
+    <input type="submit" value="Save task">
+  </div>
+</form>
+{% endblock %}

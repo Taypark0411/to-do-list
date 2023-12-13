@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block content %}
+<div class="row"><h1>View details</h1></div>
+
+<div class="row">
+  <label> task</label>
+  <input type="text" name="task" value=" {{aTask[1]}}" disabled />
+</div>
+<div class="row">
+  <label> Due_Date</label>
+  <input type="text" name="due_date" value="{{aTask[2]}} " disabled />
+</div>
+<div class="row">
+  <label> Note</label>
+  <input type="text" name="note" value=" {{aTask[3]}}" disabled />
+</div>
+<div class="row">
+  <label> Status</label>
+  <input type="text" name="status" value="{{aTask[4]}} " disabled />
+</div>
+  <a href="/to_do_list" class="btn btn-outline-success">Go back</a>
+
+{% endblock %}
