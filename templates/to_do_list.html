@@ -12,21 +12,21 @@
       </tr>
     </thead>
     <tbody>
-      {% for task in to_do_list %}
+      {% for todo in to_do_list %}
       <tr>
-        <td>{{task[0]}}</td>
-        <td>{{task[1]}}</td>
-        <td>{{task[2]}}</td>
-        <td>{{task[3]}}</td>
-        <td>{{task[4]}}</td>
+        <td>{{todo.id}}</td>
+        <td>{{todo.task}}</td>
+        <td>{{todo.due_date}}</td>
+        <td>{{todo.note}}</td>
+        <td>{{todo.status}}</td>
         <td>
-          <a href="/edit/{{task[0]}}" class="btn btn-outline-primary btn-sm"
+          <a href="/edit/{{todo.id}}" class="btn btn-outline-primary btn-sm"
             >Edit</a
           >
-          <a href="/view/{{task[0]}}" class="btn btn-outline-primary btn-sm"
+          <a href="/view/{{todo.id}}" class="btn btn-outline-primary btn-sm"
             >View</a
           >
-          <a href="/delete/{{task[0]}}" class="btn btn-outline-primary btn-sm"
+          <a href="/delete/{{todo.id}}" class="btn btn-outline-primary btn-sm"
             >Delete</a
           >
         </td>
